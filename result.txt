@@ -1,0 +1,26 @@
+net.optimized_memory = 0 
+mini_batch = 1, batch = 8, time_steps = 1, train = 0 
+Create CUDA-stream - 0 
+ Create cudnn-handle 0 
+
+ seen 64, trained: 2880 K-images (45 Kilo-batches_64) 
+Enter Image Path:  Detection layer: 16 - type = 28 
+ Detection layer: 23 - type = 28 
+data/1_1.png: Predicted in 1.998000 milli-seconds.
+start: 7%	(left_x:  547   top_y:  589   width:   96   height:   73)
+end			: 11%	(left_x:  552   top_y: 1122   width:   76   height:   79)
+end			: 2%	(left_x:  655   top_y: 1099   width:   89   height:   96)
+end			: 3%	(left_x:  688   top_y:  243   width:  102   height:   74)
+end			: 26%	(left_x:  691   top_y: 1097   width:   80   height:   92)
+start: 2%	(left_x:  697   top_y:  573   width:  102   height:   76)
+start: 4%	(left_x:  704   top_y: 1203   width:   71   height:   43)
+Enter Image Path:  Detection layer: 16 - type = 28 
+ Detection layer: 23 - type = 28 
+data/2_2.png: Predicted in 2.014000 milli-seconds.
+end			: 9%	(left_x:  527   top_y:  317   width:  101   height:   66)
+start: 20%	(left_x:  540   top_y:  589   width:   87   height:   71)
+end			: 78%	(left_x:  544   top_y: 1133   width:   77   height:   87)
+end			: 4%	(left_x:  657   top_y: 1115   width:   88   height:   92)
+end			: 20%	(left_x:  691   top_y: 1103   width:   84   height:   90)
+start: 3%	(left_x:  702   top_y:  583   width:  100   height:   78)
+Enter Image Path: 

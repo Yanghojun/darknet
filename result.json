@@ -1,0 +1,27 @@
+[
+{
+ "frame_id":1, 
+ "filename":"data/1_1.png", 
+ "objects": [ 
+  {"class_id":1, "name":"end			", "relative_coordinates":{"center_x":0.571322, "center_y":0.893191, "width":0.062192, "height":0.072008}, "confidence":0.255653}, 
+  {"class_id":1, "name":"end			", "relative_coordinates":{"center_x":0.461177, "center_y":0.907790, "width":0.059126, "height":0.061921}, "confidence":0.106476}, 
+  {"class_id":1, "name":"end			", "relative_coordinates":{"center_x":0.577642, "center_y":0.218814, "width":0.079958, "height":0.057945}, "confidence":0.033578}, 
+  {"class_id":1, "name":"end			", "relative_coordinates":{"center_x":0.546603, "center_y":0.896070, "width":0.069706, "height":0.074692}, "confidence":0.021588}, 
+  {"class_id":0, "name":"start", "relative_coordinates":{"center_x":0.465014, "center_y":0.488768, "width":0.074807, "height":0.057197}, "confidence":0.066489}, 
+  {"class_id":0, "name":"start", "relative_coordinates":{"center_x":0.577729, "center_y":0.956534, "width":0.055292, "height":0.033256}, "confidence":0.041384}, 
+  {"class_id":0, "name":"start", "relative_coordinates":{"center_x":0.584281, "center_y":0.477266, "width":0.079599, "height":0.059055}, "confidence":0.022538}
+ ] 
+}, 
+{
+ "frame_id":2, 
+ "filename":"data/2_2.png", 
+ "objects": [ 
+  {"class_id":1, "name":"end			", "relative_coordinates":{"center_x":0.455079, "center_y":0.919164, "width":0.059884, "height":0.068147}, "confidence":0.780876}, 
+  {"class_id":1, "name":"end			", "relative_coordinates":{"center_x":0.572964, "center_y":0.896386, "width":0.065921, "height":0.070096}, "confidence":0.196380}, 
+  {"class_id":1, "name":"end			", "relative_coordinates":{"center_x":0.451588, "center_y":0.273546, "width":0.079202, "height":0.051480}, "confidence":0.090602}, 
+  {"class_id":1, "name":"end			", "relative_coordinates":{"center_x":0.547176, "center_y":0.907062, "width":0.068360, "height":0.071574}, "confidence":0.044582}, 
+  {"class_id":0, "name":"start", "relative_coordinates":{"center_x":0.456092, "center_y":0.488169, "width":0.068139, "height":0.055427}, "confidence":0.203369}, 
+  {"class_id":0, "name":"start", "relative_coordinates":{"center_x":0.587242, "center_y":0.486063, "width":0.078108, "height":0.060940}, "confidence":0.033974}
+ ] 
+}
+]
