@@ -36,7 +36,7 @@ def data_split(dir_path:str, save_train_path:str, save_valid_path:str):
         
     assert check_files_existence(txt_paths), 'Error!'
     
-    train_img_paths, val_img_paths, train_txt_paths, val_txt_paths = train_test_split(img_paths, txt_paths, random_state=5, test_size=0.1)
+    train_img_paths, val_img_paths, train_txt_paths, val_txt_paths = train_test_split(img_paths, txt_paths, random_state=5, test_size=0.2)
     os.makedirs(save_train_path, exist_ok=True), os.makedirs(save_valid_path, exist_ok=True)
     copy_files_to_dir(train_img_paths, save_train_path), copy_files_to_dir(train_txt_paths, save_train_path)
     copy_files_to_dir(val_img_paths, save_valid_path), copy_files_to_dir(val_txt_paths, save_valid_path)
@@ -69,10 +69,31 @@ def las_preprocess(data_dir):
         img = np.expand_dims(img, axis=2)
         img = np.concatenate((img, img, img), axis=2)
         iio.v2.imwrite(path, img)
+        
+def find_class_id(dir_path:str, class_id:int)->None:
+    save_files = []
+    txt_paths = glob(dir_path + '/*.txt')
+    
+    # read lines
+    for path in txt_paths:
+        with open(path, 'r') as f:
+            txts = f.readlines()
+            
+            # check class in txts
+            for txt in txts:
+                txt_id = int(txt[0])
+                if txt_id == class_id:
+                    save_files.append(path)
+                    break
+    
+    print(save_files)
 
 if __name__ == '__main__':
     # train_test_split
-    # data_split('./data/las_data_23_02_09_300_data_annotation', './data/train_las', './data/valid_las')
+    # data_split('./data/las_data_annotated', './data/train_las', './data/valid_las')
     
     # create train_txt file
-    make_train_txt_file('./data/train_las', './data/valid_las', './data')
+    # make_train_txt_file('./data/train_las', './data/valid_las', './data')
+    
+    # find txt files that have the class id
+    find_class_id('./data/train_las', 2)
