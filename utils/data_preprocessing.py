@@ -90,7 +90,7 @@ def find_class_id(dir_path:str, class_id:int)->None:
 
 if __name__ == '__main__':
     # train_test_split
-    # data_split('./data/las_data_annotated', './data/train_las', './data/valid_las')
+    data_split('./data/las_data_annotated', './data/train_las', './data/valid_las')
     
     # create train_txt file
     # make_train_txt_file('./data/train_las', './data/valid_las', './data')
