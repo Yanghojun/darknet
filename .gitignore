@@ -41,6 +41,8 @@ build/Makefile
 */vcpkg-manifest-install.log
 build.log
 __pycache__/
+bad_label.list
+bad.list
 
 # OS Generated #
 .DS_Store*

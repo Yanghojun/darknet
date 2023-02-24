@@ -72,7 +72,7 @@ def las_preprocess(data_dir):
         
 def find_class_id(dir_path:str, class_id:int)->None:
     save_files = []
-    txt_paths = glob(dir_path + '/*.txt')
+    txt_paths = glob(os.path.join(dir_path, '*.txt'))
     
     # read lines
     for path in txt_paths:
@@ -84,16 +84,45 @@ def find_class_id(dir_path:str, class_id:int)->None:
                 txt_id = int(txt[0])
                 if txt_id == class_id:
                     save_files.append(path)
+                    save_files.append(path[:-4] + '.png')
                     break
     
-    print(save_files)
+    return save_files
+
+def count_bbox_for_each_class(dir_path:str)->list:
+    # save_files = []
+    txt_paths = glob(os.path.join(dir_path, '*.txt'))
+    cnt_list = [0 for _ in range(7)]
+    
+    # read lines
+    for path in txt_paths:
+        with open(path, 'r') as f:
+            txts = f.readlines()
+            
+            # check class in txts
+            for txt in txts:
+                txt_id = int(txt[0])
+                cnt_list[txt_id] += 1
+                # if txt_id == class_id:
+                #     save_files.append(path)
+                #     save_files.append(path[:-4] + '.png')
+                #     break
+    
+    print(cnt_list)
+    # return save_files
 
 if __name__ == '__main__':
     # train_test_split
-    data_split('./data/las_data_annotated', './data/train_las', './data/valid_las')
+    # data_split('./data/las_data_annotated_v2_23_02_21', './data/train_las', './data/valid_las')
     
     # create train_txt file
     # make_train_txt_file('./data/train_las', './data/valid_las', './data')
     
     # find txt files that have the class id
-    find_class_id('./data/train_las', 2)
+    paths = find_class_id('./data/valid_las', 2)
+    print(paths)
+    # for path in paths:
+    #     os.remove(path)
+    
+    # count bbox for each class in the path
+    count_bbox_for_each_class('./data/train_las')
